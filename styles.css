@@ -136,6 +136,12 @@ body {
   text-decoration: none;
 }
 
+.plan-change:focus-visible {
+  outline: 2px solid var(--primary-blue-700);
+  outline-offset: 4px;
+  border-radius: 4px;
+}
+
 .btn-primary {
   width: 100%;
   padding: 15px;
@@ -156,6 +162,11 @@ body {
   background-color: hsl(245, 83%, 68%);
 }
 
+.btn-primary:focus-visible {
+  outline: 3px solid var(--neutral-blue-950);
+  outline-offset: 3px;
+}
+
 .btn-cancel {
   display: block;
   width: 100%;
@@ -169,6 +180,12 @@ body {
 
 .btn-cancel:hover {
   color: var(--neutral-blue-950);
+}
+
+.btn-cancel:focus-visible {
+  outline: 2px solid var(--neutral-blue-950);
+  outline-offset: 4px;
+  border-radius: 4px;
 }
 
 @media (min-width: 768px) {
