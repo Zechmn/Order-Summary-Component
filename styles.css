@@ -1,0 +1,222 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* Colors from style guide */
+  --primary-blue-100: hsl(225, 100%, 94%);
+  --primary-blue-700: hsl(245, 75%, 52%);
+  --neutral-blue-50: hsl(225, 100%, 98%);
+  --neutral-gray-600: hsl(224, 23%, 55%);
+  --neutral-blue-950: hsl(223, 47%, 23%);
+  
+  /* Custom colors from requirements */
+  --color-black: #000000;
+  --color-medium-grey: #666666;
+  --color-white: #FFFFFF;
+  --color-border: #E5E5E5;
+  --color-accent-blue: #007AFF;
+  --color-success-green: #34C759;
+}
+
+body {
+  font-family: 'Red Hat Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', sans-serif;
+  font-size: 16px;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--primary-blue-100);
+  background-image: url('./images/pattern-background-mobile.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: top center;
+  padding: 20px;
+}
+
+.container {
+  width: 100%;
+  max-width: 450px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.order-card {
+  background-color: var(--color-white);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 40px 40px -20px rgba(13, 48, 189, 0.15);
+  width: 100%;
+  max-width: 450px;
+}
+
+.card-header {
+  width: 100%;
+  overflow: hidden;
+}
+
+.hero-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.card-body {
+  padding: 32px 24px;
+  text-align: center;
+}
+
+.card-title {
+  font-size: 22px;
+  font-weight: 900;
+  color: var(--neutral-blue-950);
+  margin-bottom: 16px;
+}
+
+.card-description {
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.6;
+  color: var(--neutral-gray-600);
+  margin-bottom: 24px;
+  padding: 0 8px;
+}
+
+.plan-details {
+  display: flex;
+  align-items: center;
+  background-color: var(--neutral-blue-50);
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 24px;
+  gap: 16px;
+}
+
+.plan-icon {
+  flex-shrink: 0;
+}
+
+.plan-icon img {
+  width: 48px;
+  height: 48px;
+  display: block;
+}
+
+.plan-info {
+  flex-grow: 1;
+  text-align: left;
+}
+
+.plan-name {
+  font-size: 14px;
+  font-weight: 900;
+  color: var(--neutral-blue-950);
+  margin-bottom: 4px;
+}
+
+.plan-price {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--neutral-gray-600);
+}
+
+.plan-change {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--primary-blue-700);
+  text-decoration: underline;
+  transition: all 0.3s ease;
+}
+
+.plan-change:hover {
+  color: hsl(245, 83%, 68%);
+  text-decoration: none;
+}
+
+.btn-primary {
+  width: 100%;
+  padding: 15px;
+  background-color: var(--primary-blue-700);
+  color: var(--color-white);
+  border: none;
+  border-radius: 12px;
+  font-size: 15px;
+  font-weight: 700;
+  font-family: 'Red Hat Display', sans-serif;
+  cursor: pointer;
+  box-shadow: 0 20px 20px rgba(56, 42, 225, 0.19);
+  transition: all 0.3s ease;
+  margin-bottom: 24px;
+}
+
+.btn-primary:hover {
+  background-color: hsl(245, 83%, 68%);
+}
+
+.btn-cancel {
+  display: block;
+  width: 100%;
+  padding: 8px;
+  color: var(--neutral-gray-600);
+  font-size: 15px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.btn-cancel:hover {
+  color: var(--neutral-blue-950);
+}
+
+@media (min-width: 768px) {
+  body {
+    background-image: url('./images/pattern-background-desktop.png');
+  }
+  
+  .card-body {
+    padding: 40px 48px;
+  }
+  
+  .card-title {
+    font-size: 28px;
+    margin-bottom: 18px;
+  }
+  
+  .card-description {
+    font-size: 16px;
+    padding: 0 16px;
+    margin-bottom: 28px;
+  }
+  
+  .plan-details {
+    padding: 20px;
+    margin-bottom: 32px;
+    gap: 20px;
+  }
+  
+  .plan-name {
+    font-size: 16px;
+  }
+  
+  .plan-price {
+    font-size: 16px;
+  }
+  
+  .plan-change {
+    font-size: 14px;
+  }
+  
+  .btn-primary {
+    padding: 16px;
+    margin-bottom: 32px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .order-card {
+    max-width: 450px;
+  }
+}
